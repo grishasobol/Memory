@@ -1,0 +1,14 @@
+Undo one file
+{
+git checkout filename
+}
+
+show last commit
+{
+git log -1
+}
+
+checkout new branch
+{
+git checkout -b iss53
+}

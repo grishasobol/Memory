@@ -1,0 +1,4 @@
+Recursive cycle for all files in directory
+{
+for file in `find . -name "*.h"`; do python ../main.py $file; echo $file ; done
+}
