@@ -2,3 +2,11 @@ Recursive cycle for all files in directory
 {
 for file in `find . -name "*.h"`; do python ../main.py $file; echo $file ; done
 }
+
+Move all files in the directory to another directory with renaming. Files can contain spaces
+{
+SAVEIFS=$IFS
+IFS=$(echo -en "\n\b")
+let "i=0";for file in `find Data -name "*.jpg"`;do cp "$file" "Data1/$i.jpg"; let "i=i+1" ; done
+IFS=$SAVEIFS
+}
