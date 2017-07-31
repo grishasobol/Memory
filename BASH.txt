@@ -10,3 +10,13 @@ IFS=$(echo -en "\n\b")
 let "i=0";for file in `find Data -name "*.jpg"`;do cp "$file" "Data1/$i.jpg"; let "i=i+1" ; done
 IFS=$SAVEIFS
 }
+
+Show folders size
+{
+du -sh ./*
+}
+
+Iterate over file. Move files by line in source file
+{
+target_dir=files_clib && rm -rf $target_dir && mkdir $target_dir && cat $target_dir.txt | while read line; do file="${line/\.\./}"; echo $file; mv "./$file" -t $target_dir; done
+}

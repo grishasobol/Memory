@@ -1,0 +1,9 @@
+Show all declaration
+{
+HOTKEY: g + ]
+}
+
+Find current word
+{
+HOTKEY: shift + 3
+}

@@ -1,0 +1,4 @@
+Example of using re in python
+{
+[^0-9]Ps_([a-zA-Z0-9_]*?)(XY|JK|CJMP)([sdq](?:Nf)?)?(?:usingJK([sdq](?:Nf)?))?
+}
