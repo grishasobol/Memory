@@ -20,3 +20,14 @@ Iterate over file. Move files by line in source file
 {
 target_dir=files_clib && rm -rf $target_dir && mkdir $target_dir && cat $target_dir.txt | while read line; do file="${line/\.\./}"; echo $file; mv "./$file" -t $target_dir; done
 }
+
+Restart your network card or other devices 
+{
+sudo ifconfig device_name down
+sudo ifconfig device_name up
+}
+
+Show/List your network cards or other devices
+{
+sudo lshw -class network
+}
