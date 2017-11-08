@@ -1,0 +1,8 @@
+Matplotlib example of bar chart
+{
+plt.bar(X, Y, width)
+plt.xticks(X, list(test_results), rotation='vertical')
+plt.margins(0.001)
+plt.subplots_adjust(bottom=0.3)
+plt.show()
+}
