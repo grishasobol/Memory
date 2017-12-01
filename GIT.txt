@@ -32,3 +32,8 @@ show tag of the begining of the branch
 {
 git merge-base master branch_name
 }
+
+Update remote branch list
+{
+git remote update origin --prune
+}
