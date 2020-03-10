@@ -1,0 +1,169 @@
+## bash
+// Recursive cycle for all files in directory
+for file in `find . -name "*.h"`; do python ../main.py $file; echo $file ; done
+
+## bash
+// Move all files in the directory to another directory with renaming. Files can contain spaces
+SAVEIFS=$IFS
+IFS=$(echo -en "\n\b")
+let "i=0";for file in `find Data -name "*.jpg"`;do cp "$file" "Data1/$i.jpg"; let "i=i+1" ; done
+IFS=$SAVEIFS
+
+## bash
+// Show dirs size
+du -sh ./*
+
+## bash
+// Iterate over file. Move files by line in source file
+target_dir=files_clib && rm -rf $target_dir && mkdir $target_dir && cat $target_dir.txt | while read line; do file="${line/\.\./}"; echo $file; mv "./$file" -t $target_dir; done
+
+## bash
+// Restart your network card or other devices
+sudo ifconfig device_name down
+sudo ifconfig device_name up
+
+## bash
+// Show/List your network cards or other devices
+sudo lshw -class network
+
+## re python
+// Example of using re in python
+[^0-9]Ps_([a-zA-Z0-9_]*?)(XY|JK|CJMP)([sdq](?:Nf)?)?(?:usingJK([sdq](?:Nf)?))?
+// "?:" - not group
+// "?=" - lookahead
+// "*?" - minimize operator "*"
+
+## git
+// Undo one file
+git checkout filename
+
+## git
+// show last commit
+git log -1
+
+## git
+// checkout new branch
+git checkout -b iss53
+
+## git
+// reset/undo to last commit
+git reset --hard
+
+## git
+// delete local branch
+git branch -d branchname
+
+## git
+// show difference between current state and begin of the branch
+git diff `git merge-base master branch_name`..branch_name
+
+## git
+// show tag of the begining of the branch
+git merge-base master branch_name
+
+## git
+// Update remote branch list
+git remote update origin --prune
+
+## vim
+// Show all declarations
+HOTKEY: g + ]
+
+## vim
+// Search current word
+HOTKEY: shift + 3 or shift + 8
+
+## vim
+// Paste in command line vim shortcut:
+ctrl+r and "
+// or
+ctrl+r and -
+// or
+ctrl+r and .
+
+## grep
+// Grep only code files:
+grep pattern -r --include=\*.{cpp,h} rootdir
+// or
+grep -rbni <> --include=\*.{cc,h} .
+
+## vim split
+// Change horizontal split to vertical:
+ctrl+w and t and ctrl+w and H
+
+## coredump linux bash
+// Set core dump mode:
+ulimit -c unlimited
+// May be should also do:
+sudo sysctl -w kernel.core_pattern=./core-%e.%p.%h.%t
+
+## svn
+// Svn redo patch
+svn patch --reverse-diff <my-patch-file>
+
+## svn patch
+// Apply patch
+// Aplly new files, but do not add them in list of svn added files.
+patch -p0 -i <patch>
+// More useful
+svn patch <patch>
+
+## svn
+// Show svn status when there are bin files in dir
+svn status | grep "^[ADMRCXI]"
+// or
+svn status -q
+
+## svn
+// Revert all changes in svn rep
+svn revert -R .
+
+## bash nfs
+// How to mount nfs
+mount.nfs <my ip>:/home/<user-dir> /home/<user-dir>
+
+## perf bash
+// How to collect call-graph perf info
+perf record -a --call-graph lbr -o <perf-file> <run-command>
+perf report --call-graph -i <perf-file> --show-total-period [-S <func1>,<func2>,...]
+// Should make with flags "-g -fno-omit-frame-pointer"
+
+## bash chmod
+// How to give execution rights
+chmod +x <file>
+
+## bash cpu mpstat
+// How to get cores loading
+mpstat -P ALL 1
+
+## gdb
+// gdb asm view mode
+layout asm
+// To exit push
+ctrl+x+a
+// for source view use
+layout src
+
+## bash ls
+// Sorted by date ls
+ls -lt
+
+## svn
+// svn undo patch
+svn patch --reverse-diff <patch>
+
+## grep bash sed xargs
+// Rename all matched strings
+grep -rlI <str1> . | xargs sed -i 's/<str1>/<str2>/g'
+
+## gdb
+// Disable gdb continue message: Type <return> to continue, or q <return> to quit
+set pagination off
+
+## gdb
+// gdb set logging
+set logging on
+
+## bash
+// How to open command in a new terminal
+gnome-terminal -- <command>
