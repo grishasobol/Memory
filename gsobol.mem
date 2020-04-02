@@ -167,3 +167,35 @@ set logging on
 ## bash
 // How to open command in a new terminal
 gnome-terminal -- <command>
+
+## gvim gvimdiff
+// gvimdiff changes undo. See: https://gist.github.com/mattratleph/4026987
+// To undo change or to apply push: "do" or "dp"
+
+## putty nvim neo-vim
+// Keys <Home> and <End> don't work for nvim with putty.
+// To enable it set do
+export TERM=putty-256color
+
+## python pdb
+// Run python in debug mode
+python -m pdb <script>.py
+
+## bash
+// Run command multiple times
+for i in {1..10}; do command; done
+
+## tmux
+// Create new windows as next
+new-window -a
+
+## anaconda conda windows cygwin
+// How to activate coda in cygwin
+https://stackoverflow.com/questions/36969824/using-anaconda-environments-with-cygwin-on-windows
+
+## ssh bash
+// Run bashrc when connect using ssh
+// Add to ~/.bash_profile
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
