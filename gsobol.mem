@@ -192,6 +192,8 @@ new-window -a
 ## anaconda conda windows cygwin
 // How to activate coda in cygwin
 https://stackoverflow.com/questions/36969824/using-anaconda-environments-with-cygwin-on-windows
+// or
+./examples/conda-cygwin.bash
 
 ## ssh bash
 // Run bashrc when connect using ssh
